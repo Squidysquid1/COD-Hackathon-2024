@@ -4,7 +4,7 @@ This project was initially completed in 5 hours during the COD hackathon event u
 
 Disgotchi is a virtual pet that can be cared for by any Discord user. The commands are fairly self-explanatory.
 
-## Contributers
+## Contributers:
 
 - [@Squidysquid1](https://github.com/Squidysquid1)
 - [@cmasta9](https://github.com/cmasta9)
