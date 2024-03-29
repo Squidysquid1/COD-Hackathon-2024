@@ -9,3 +9,4 @@ Disgotchi is a virtual pet that can be cared for by any Discord user. The comman
 - [@Squidysquid1](https://github.com/Squidysquid1)
 - [@cmasta9](https://github.com/cmasta9)
 - [@Barderus](https://github.com/Barderus)
+- [@Olevonk](https://github.com/Olevonk)
