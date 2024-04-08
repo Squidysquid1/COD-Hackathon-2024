@@ -23,5 +23,10 @@ module.exports = {
             await pets.set(interaction.user.id,newPet);
             await interaction.reply('Pet sucessfully adopted!')
         }
+    
+        // output embed
+        let petEmbed = await embed(interaction);
+        petEmbed.content = result;
+        await interaction.reply(petEmbed);
     }
 }

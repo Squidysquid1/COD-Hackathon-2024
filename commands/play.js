@@ -8,21 +8,22 @@ module.exports = {
         .setDescription('Play with your Disgotchi!'),
     async execute(interaction){
         const userId  = interaction.user.id;
-        let pet = await pets.get(userId);
+        const getPet = await pets.get(userId);
         let result = "";
-        if(pet.energy >= 10){
-            pet.energy -= 10;
-            pet.exp += 5;
-            pet.happiness += 1;
-            result = `${pet.nickname} had fun playing with you!`;
-            pets.set(interaction.user.id,pet);
+        if(getPet.energy >= 10){
+            getPet.energy -= 10;
+            getPet.exp += 15;
+            getPet.happiness += 1;
+            getPet.cleanliness -= 1;
+            result = `${getPet.nickname} had fun playing with you!`;
+            await pets.set(interaction.user.id, getPet);
         }
         else{
-            result = `${pet.nickname} is too tired to play.`;
+            result = `${getPet.nickname} is too tired to play.`;
         }
         
         let petEmbed = await embed(interaction);
-        await interaction.reply(result);
-        await interaction.followUp(petEmbed);
+        petEmbed.content = result;
+        await interaction.reply(petEmbed);
     }
 }
